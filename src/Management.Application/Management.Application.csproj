@@ -7,4 +7,8 @@
     <RootNamespace>Managment.Application</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Management.Domain\Management.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
