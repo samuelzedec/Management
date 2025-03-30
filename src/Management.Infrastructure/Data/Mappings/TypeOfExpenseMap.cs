@@ -4,15 +4,15 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Managment.Infrastructure.Data.Mappings;
 
-public class CategoryMap : IEntityTypeConfiguration<Category>
+public class ExpenseTypeMap : IEntityTypeConfiguration<ExpenseType>
 {
-    public void Configure(EntityTypeBuilder<Category> builder)
+    public void Configure(EntityTypeBuilder<ExpenseType> builder)
     {
-        builder.ToTable("Category");
+        builder.ToTable("ExpenseType");
 
         builder
             .HasKey(c => c.Id)
-            .HasName("PK_Category_Id");
+            .HasName("PK_ExpenseType_Id");
 
         builder
             .Property(c => c.Id)
