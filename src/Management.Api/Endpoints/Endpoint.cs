@@ -15,7 +15,11 @@ public static class Endpoint
             .WithTags("Health Check")
             .MapGet("/", () => Results.Ok(Result<dynamic>
                 .Success(new { Status = "Healthy", Time = DateTime.UtcNow }, "Health Check (OK)")));
-        
+
+        endpoints
+            .MapGroup("/v1/expense-types")
+            .WithTags("Expense Type")
+            .RequireAuthorization();
     }
 
     private static IEndpointRouteBuilder MapEndpoint<TEnpoint>(this IEndpointRouteBuilder app)
