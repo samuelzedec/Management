@@ -6,12 +6,12 @@ public static class AppExtension
 {
     public static void UsePipeline(this WebApplication app)
     {
-        app.UseEnviromentDevelop();
+        app.UseDevelopmentEnvironment();
         app.UseSecurity();
         app.MapEndpoints();
     }
     
-    private static void UseEnviromentDevelop(this WebApplication app)
+    private static void UseDevelopmentEnvironment(this WebApplication app)
     {
         if (app.Environment.IsDevelopment())
         {

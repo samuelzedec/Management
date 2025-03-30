@@ -13,7 +13,15 @@ namespace Management.Api.Common.Api;
 
 public static class BuilderExtension
 {
-    public static void AddLogs(this WebApplicationBuilder builder)
+    public static void AddPipeline(this WebApplicationBuilder builder)
+    {
+        builder.AddDataContext();
+        builder.AddLogs();
+        builder.AddSecurity();
+        builder.AddServices();
+        builder.AddDevelopmentEnvironment();
+    }
+    private static void AddLogs(this WebApplicationBuilder builder)
     {
         var output = "{Timestamp:dd-MM-yyyy HH:mm:ss} [{Level}] {Message} {Properties:j}{NewLine}{Exception}";
         Log.Logger = new LoggerConfiguration()
@@ -24,7 +32,7 @@ public static class BuilderExtension
         builder.Logging.AddSerilog();
     }
     
-    public static void AddDataContext(this WebApplicationBuilder builder)
+    private static void AddDataContext(this WebApplicationBuilder builder)
     {
         builder
             .Services
@@ -42,7 +50,7 @@ public static class BuilderExtension
             });
     }
 
-    public static void AddSecurity(this WebApplicationBuilder builder)
+    private static void AddSecurity(this WebApplicationBuilder builder)
     {
         /* ========================================================================================================================================
          * Cria um logger usando o LoggerFactory, configurando o Serilog como o provedor de logs
@@ -81,9 +89,9 @@ public static class BuilderExtension
         builder.Services.AddAuthorization();
     }
 
-    public static void AddServices(this WebApplicationBuilder builder)
+    private static void AddServices(this WebApplicationBuilder builder)
     {
-        builder.Services.AddInfrastrucutre();
+        builder.Services.AddInfrastructure();
 
         builder.Services
             .AddIdentityCore<IdentityUser<Guid>>()
@@ -108,7 +116,7 @@ public static class BuilderExtension
 
     }
 
-    public static void AddDevelopmentMode(this WebApplicationBuilder builder)
+    private static void AddDevelopmentEnvironment(this WebApplicationBuilder builder)
     {
         builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddSwaggerGen();
