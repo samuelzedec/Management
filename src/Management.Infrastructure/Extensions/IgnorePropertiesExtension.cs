@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
-namespace Managment.Infrastructure.Extensions;
+namespace Management.Infrastructure.Extensions;
 
 public static class IgnorePropertiesExtension
 {

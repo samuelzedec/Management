@@ -1,6 +1,6 @@
-using Managment.Domain.Abstractions.Interfaces;
+using Management.Domain.Abstractions.Interfaces;
 
-namespace Managment.Infrastructure.Data;
+namespace Management.Infrastructure.Data;
 
 public class UnitOfWork(AppDbContext context) : IUnitOfWork
 {
