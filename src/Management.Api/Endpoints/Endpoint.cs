@@ -1,5 +1,5 @@
 using Management.Api.Common.Api;
-using Managment.Domain.Abstractions.Base;
+using Management.Domain.Abstractions.Base;
 
 namespace Management.Api.Endpoints;
 
