@@ -1,7 +1,7 @@
-using Managment.Domain.Entities;
+using Management.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace Managment.Infrastructure.Extensions;
+namespace Management.Infrastructure.Extensions;
 
 public static class SeedersExtension
 {

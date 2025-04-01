@@ -1,10 +1,10 @@
-using Managment.Domain.Entities;
-using Managment.Infrastructure.Extensions;
+using Management.Domain.Entities;
+using Management.Infrastructure.Extensions;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-namespace Managment.Infrastructure.Data;
+namespace Management.Infrastructure.Data;
 
 public class AppDbContext(DbContextOptions<AppDbContext> options) 
     : IdentityDbContext<IdentityUser<Guid>, IdentityRole<Guid>, Guid, IdentityUserClaim<Guid>, IdentityUserRole<Guid>, IdentityUserLogin<Guid>, IdentityRoleClaim<Guid>, IdentityUserToken<Guid>>(options)
