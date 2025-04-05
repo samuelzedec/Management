@@ -6,7 +6,7 @@ namespace Managment.Infrastructure;
 
 public static class DependencyInjection
 {
-    public static IServiceCollection AddInfrastrucutre(this IServiceCollection service)
+    public static IServiceCollection AddInfrastructure(this IServiceCollection service)
     {
         service.AddScoped<IUnitOfWork, UnitOfWork>();
         return service;
