@@ -1,4 +1,4 @@
-﻿namespace Managment.Domain.Entities;
+﻿namespace Management.Domain.Entities;
 
 public class Transaction
 {

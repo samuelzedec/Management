@@ -1,6 +1,6 @@
 using System.Text.Json.Serialization;
 
-namespace Managment.Domain.Abstractions.Base;
+namespace Management.Domain.Abstractions.Base;
 
 public class Result<T>(T? data, string message, int statusCode = 200)
 {

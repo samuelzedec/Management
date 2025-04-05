@@ -1,4 +1,4 @@
-namespace Managment.Domain.Abstractions.Base;
+namespace Management.Domain.Abstractions.Base;
 
 public abstract class Entity
 {
