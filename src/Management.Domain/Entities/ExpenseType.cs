@@ -1,6 +1,6 @@
-using Managment.Domain.Abstractions.Base;
+using Management.Domain.Abstractions.Base;
 
-namespace Managment.Domain.Entities;
+namespace Management.Domain.Entities;
 
 public class ExpenseType(string title, string description) : Entity
 {
