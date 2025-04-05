@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace Managment.Infrastructure.Data.Mappings.Identity;
+namespace Management.Infrastructure.Data.Mappings.Identity;
 
 public class IdentityUserTokenMap 
     : IEntityTypeConfiguration<IdentityUserToken<Guid>>

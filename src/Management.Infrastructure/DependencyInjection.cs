@@ -1,8 +1,8 @@
-using Managment.Domain.Abstractions.Interfaces;
-using Managment.Infrastructure.Data;
+using Management.Domain.Abstractions.Interfaces;
+using Management.Infrastructure.Data;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Managment.Infrastructure;
+namespace Management.Infrastructure;
 
 public static class DependencyInjection
 {

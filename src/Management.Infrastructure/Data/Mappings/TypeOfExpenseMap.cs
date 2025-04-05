@@ -1,8 +1,8 @@
-using Managment.Domain.Entities;
+using Management.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace Managment.Infrastructure.Data.Mappings;
+namespace Management.Infrastructure.Data.Mappings;
 
 public class ExpenseTypeMap : IEntityTypeConfiguration<ExpenseType>
 {
